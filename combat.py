@@ -12,22 +12,22 @@ MOVE_UPDATE_RATE = 5
 
 # all playfeild and player data here
 color0 = 0
-sound_number = 0
+sound_type = 0
 freq_number = 0
-sound_on = 0
+sound_number = 1
 
 move_update = 0
 
 score0 = 0
 tank0_hit = 0
 tank0_angle = 0
-tank0_x = 40
+tank0_x = 4
 tank0_y = SCREEN_Y/2 - 4
 
 score1 = 0
 tank1_hit = 0
 tank1_angle = 8
-tank1_x = SCREEN_X/2 - 8 #SCREEN_X - 18
+tank1_x = SCREEN_X - 20
 tank1_y = SCREEN_Y/2 - 4
 
 fire0_busy = 0 
@@ -150,55 +150,38 @@ while move != 'quit':
 
     if move == 'left0':
         tank0_angle += 1
-        freq_number = (freq_number - 1) & 0x1F
-        print freq_number             
         
-#        sound (20)
     if move == 'right0':
         tank0_angle -= 1
-#        sound (10)   
-        freq_number = (freq_number + 1) & 0x1F
-        print freq_number             
+       
     tank0_angle &= 0x0F
 
     if move == 'up0':
         tank0_x += move_table_x[tank0_angle]
         tank0_y += move_table_y[tank0_angle]
-        sound_number = (sound_number + 1) & 0xF
-        print sound_number 
-
-    if move == 'down0':
-        sound_number = (sound_number - 1) & 0xF
-        print sound_number 
-
-
-
+        sound_number = 2
 
     if move == 'fire0':
-        if sound_on == 1:
-            sound_on = 0
-        else:
-            sound_on = 1
         if fire0_busy == 0 and tank1_hit == 0:
             fire0_x = tank0_x + 4
             fire0_y = tank0_y + 4
             fire0_angle = tank0_angle
             fire0_busy = 50
+            sound_number = 3
             
 
     if move == 'left1':
         tank1_angle += 1
         
-#        sound (20)
     if move == 'right1':
         tank1_angle -= 1
-#        sound (10)       
+     
     tank1_angle &= 0x0F
 
     if move == 'up1':
         tank1_x += move_table_x[tank1_angle]
         tank1_y += move_table_y[tank1_angle]
-#        sound (5) 
+        sound_number = 2
 
     if move == 'fire1':
         if fire1_busy == 0 and tank0_hit == 0:
@@ -206,43 +189,59 @@ while move != 'quit':
             fire1_y = tank1_y + 4
             fire1_angle = tank1_angle
             fire1_busy = 50
-#            sound (15)
-            print samples
-
-
-    if sound_on == 1:
-        sound (8, freq_number, sound_number, 1000)    
-
+            sound_number = 3
 
 
      # spin tanks if hit
     if tank0_hit > 0:
         tank0_hit -= 1
         tank0_angle += 1
+        sound_number = 4
 
     if tank1_hit > 0:
         tank1_hit -= 1
         tank1_angle += 1
+        sound_number = 4
+
+
+# tank engine sound idle
+    if sound_number == 1:
+        sound (8, 29, 2, 1000) 
+
+# tank engine sound moving      
+    if sound_number == 2:        
+        sound (8, 5, 2, 1000)
+        sound_number = 1   
+
+# tank fire sound        
+    if sound_number == 3:        
+        sound (8, 5, 8, 1000)
+        sound_number = 1   
+
+# tank hit sound        
+    if sound_number == 4:        
+        sound (8, 15, 8, 1000)
+        sound_number = 1   
 
     # put tanks back in visiable playfield 
     if tank0_x > SCREEN_X - 10:
-        tank0_x = 10
-    if tank0_x < 10:
+        tank0_x = 0
+    if tank0_x <= -1:
         tank0_x = SCREEN_X - 10    
 
     if tank0_y > SCREEN_Y - 10:
-        tank0_y = 10
-    if tank0_y < 10:
+        tank0_y = 8
+    if tank0_y <= 6:
         tank0_y = SCREEN_Y - 10
 
     if tank1_x > SCREEN_X - 10:
-        tank1_x = 10
-    if tank1_x < 10:
+        tank1_x = 0
+    if tank1_x <= -1:
         tank1_x = SCREEN_X -10    
 
     if tank1_y > SCREEN_Y - 10:
-        tank1_y = 10
-    if tank1_y < 10:
+        tank1_y = 8
+    if tank1_y <= 6:
         tank1_y = SCREEN_Y - 10
 
 
