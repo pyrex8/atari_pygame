@@ -10,6 +10,8 @@ This has been tested on windows and ubuntu using python 2.7
 
 atari.py is used in the example combat.py
 
+basic structure in combat.py
+----------------------------
 
 from atari import *
  
@@ -18,9 +20,8 @@ initialization
 pygame loop
 
 
-command list:
-
-=================
+command list
+------------
 
 sound(audv, audf, audc, length)
 
