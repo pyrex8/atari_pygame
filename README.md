@@ -1,5 +1,5 @@
 # atari
-$python pygame module for aiding the creation of atari 2600 VCS like games with graphics and sound routines.
+#python pygame module for aiding the creation of atari 2600 VCS like games with graphics and sound routines.
 
 This is not an emulator.
 
