@@ -31,6 +31,8 @@ command list
 
 The atari had two channels of audio. This function just has one channel for now. I just barely have the audio working so I'm not sure if audv, audf, and audc map 1:1. Length is the number of samples. The sample rate is 31400Hz, so 1000 samples is 31.8 msec.
 
+``sound(8, 12, 4, 10000)``
+
 =================
 
 
