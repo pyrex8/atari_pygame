@@ -34,6 +34,17 @@ The atari had two channels of audio. This function just has one channel for now.
 ``# tank engine sound moving``      
 ``sound(8, 5, 2, 10000)``
 
+
+*init_switches()*
+
+Sets up the repeat key function. ??? Questioning the logic of this even having a function or being placed here.
+
+*update_switches()*
+
+This only returns one key. This should return multiple key presses espcially for two player games.
+
+
+
 =================
 
 
