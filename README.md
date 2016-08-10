@@ -13,7 +13,9 @@ atari.py is used in the example combat.py
 dependencies
 ------------
 python 2.7
+
 pygame
+
 pyaudio
 
 
