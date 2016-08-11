@@ -1,4 +1,4 @@
-# atari
+# atari.py
 python pygame module for aiding the creation of atari 2600 VCS like games with graphics and sound routines.
 
 This is not an emulator. atari.py is the module. The example program is combat.py.
@@ -27,7 +27,7 @@ basic structure in combat.py
 command list
 ------------
 
-Note: There are 160 X pixels and 104 Y pixels. There are suppose to be approximaetly 192 lines on an NTSC screen. To simplify the functions and make the pixels symetrical two lines are used. This should equate to 192/2 or 96 Y pixels, but replicating combat required 104 pixels to fit the complete playfield. Some atari games use non symetical "pixels" and example is Space Invaders. The added complexity is that scan lines are interlaced so for now this is not supported.
+Note: There are 160 X pixels and 104 Y pixels. There are suppose to be approximaetly 192 lines on an NTSC screen. To simplify the functions and make the pixels symetrical two lines are used. This should equate to 192/2 or 96 Y pixels, but replicating combat required 104 pixels to fit the complete playfield. The actual visable area on a US varied so some games may have ran over the 192 line rule of thumb. Some atari games use non symetical "pixels" and example is Space Invaders. The added complexity is that scan lines are interlaced so in reality the programmer had to get the next line on an alternate screen refresh. For now single line Y pixels are not supported.
 
 
 *sound(audv, audf, audc, length)*
@@ -70,7 +70,17 @@ Non Atari function, just for naming the pygame window.
 
 This is equivalent to setting the background color register at scan line "y" and for the next "height" scan lines (remember they are interlaced).
 
+*playfield_collision(x, y)*
 
+This is a repetative process used in the code so it was turned into a function. Really just for internal code use.
+
+*place_digit(screen, x, y, digit, color)*
+
+A built in function to print digits using playfield graphics. This was one of the earliest and crudest scoring methods. On an atari this requied ROM and quite a bit of coding work. This function is to take the tedium out of doing this manually.
+
+*number(screen, x, y, value, color)*
+
+Takes the place_digit() function one step further by printing a complete integer.
 
 =================
 
