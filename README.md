@@ -43,7 +43,21 @@ Sets up the repeat key function. ??? Questioning the logic of this even having a
 
 This only returns one key. This should return multiple key presses espcially for two player games.
 
+*reset_collision()*
 
+Use this at the top of the main loop to reset collision detection, otherwise collisions are sticky.
+
+*update_collision(new_object, x, y)*
+
+Used by drawing routines to as pixels are drawn. Doesn't need to be called externally by user.
+
+*test_for_object(test_object, x, y)*
+
+This is an extra hook so that a program can test for a wall. This wasn't available on an atari. It is in the module just in case it is useful.
+
+*get_collision(first_object, second_object)*
+
+This is equivalent to the atari collision registers. Allows collision test between two objects (P0, M0, P1, M0, ,PF, BL) 0 = no collision, 1 = collision.
 
 =================
 
