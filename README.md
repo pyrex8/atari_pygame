@@ -76,11 +76,27 @@ This is a repetative process used in the code so it was turned into a function. 
 
 *place_digit(screen, x, y, digit, color)*
 
-A built in function to print digits using playfield graphics. This was one of the earliest and crudest scoring methods. On an atari this requied ROM and quite a bit of coding work. This function is to take the tedium out of doing this manually.
+A built in function to print digits using playfield graphics. This was one of the earliest and crudest scoring methods. On an atari this requied ROM and quite a bit of coding work. This function is to take the tedium out of doing this manually. Since this is drawn as a playfield object, collision with other objects is possible.
 
 *number(screen, x, y, value, color)*
 
 Takes the place_digit() function one step further by printing a complete integer.
+
+*playfield(screen, y, height, data, color, left, right)*
+
+This is the playfield drawing function. To make life easier on the programmer the 20 bit data of a half playfield is not flipped like the atari 2600. The bits are WYSWYG. The playfield function can be used to draw a half playfield on either side, a mirrored or repeated graphic using the left and right values: 0 = off, 1 = on, non inverted, and 2 = inverted.
+
+*ball(screen, x, y, width, height, color)*
+
+Ball is simplified by having an x, y, width, and height. The only "valid" widths are 1, 2, and 4 but the function is not limited to this so it is up to the programming to decide whether to enforce restrictions that emulate an atari 2600.
+
+*missile0(screen, x, y, width, height, color)*
+
+Identical to ball function.
+
+*missile1(screen, x, y, width, height, color)*
+
+Identical to ball function.
 
 =================
 
