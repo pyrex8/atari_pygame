@@ -8,9 +8,6 @@ This has been tested on windows and ubuntu using python 2.7
 atari.py is used in the example combat.py
 
 
-![alt text](https://github.com/pyrex8/atari/blob/master/combat_screen_shot.png "combat.py screen shot")
-
-
 dependencies
 ------------
 - python 2.7
