@@ -100,9 +100,8 @@ Player data is expected to be 20 bits wide as a string of characters. 1 bits are
 ```             ,'X....XX.............'``` 
 ```             ,'X.....X.............'``` 
 ```             ,'X.....X.............'``` 
-```             ,'X.....X...XX........'``` 
-```             ]```
-
+```             ,'X.....X...XX........']```
+```
 
 *ball(screen, x, y, width, height, color)*
 
