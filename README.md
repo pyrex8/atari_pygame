@@ -88,20 +88,19 @@ This is the playfield drawing function. To make life easier on the programmer th
 Player data is expected to be 20 bits wide as a string of characters. 1 bits are are represented as upper case X. any other character can be a zero, a space or a "." are the most commonly used characters is disassembled ROMS. 
 
 
-```            # 01234567890123456789``` 
-``` pfield =    ['XXXXXXXXXXXXXXXXXXXX'``` 
-```             ,'X..................X'``` 
-```             ,'X..................X'``` 
-```             ,'X...................'``` 
-```             ,'X.....XXX...........'``` 
-```             ,'X...................'``` 
-```             ,'X.............XXX...'``` 
-```             ,'X.............X.....'``` 
-```             ,'X....XX.............'``` 
-```             ,'X.....X.............'``` 
-```             ,'X.....X.............'``` 
-```             ,'X.....X...XX........']```
-```
+``             # 01234567890123456789`` 
+`` pfield =    ['XXXXXXXXXXXXXXXXXXXX'`` 
+``             ,'X..................X'`` 
+``             ,'X..................X'`` 
+``             ,'X...................'`` 
+``             ,'X.....XXX...........'`` 
+``             ,'X...................'`` 
+``             ,'X.............XXX...'`` 
+``             ,'X.............X.....'`` 
+``             ,'X....XX.............'`` 
+``             ,'X.....X.............'`` 
+``             ,'X.....X.............'`` 
+``             ,'X.....X...XX........']``
 
 *ball(screen, x, y, width, height, color)*
 
@@ -119,14 +118,14 @@ Identical to ball function.
 
 Player data is expected to be 8 bits wide as a string of characters. 1 bits are are represented as upper case X. any other character can be a zero, a space or a "." are the most commonly used characters is disassembled ROMS.   
 
-```tank =      ['        '``` 
-```             ,'XXXXXX  '``` 
-```             ,'XXXXXX  '``` 
-```             ,'  XXX   '``` 
-```             ,'  XXXXXX'``` 
-```             ,'  XXX   '``` 
-```             ,'XXXXXX  '``` 
-```             ,'XXXXXX  ']```
+``tank =       ['        '``
+``             ,'XXXXXX  '`` 
+``             ,'XXXXXX  '`` 
+``             ,'  XXX   '`` 
+``             ,'  XXXXXX'`` 
+``             ,'  XXX   '`` 
+``             ,'XXXXXX  '`` 
+``             ,'XXXXXX  ']``
 
 =================
 
