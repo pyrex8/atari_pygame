@@ -27,6 +27,9 @@ basic structure in combat.py
 command list
 ------------
 
+Note: There are 160 X pixels and 104 Y pixels. There are suppose to be approximaetly 192 lines on an NTSC screen. To simplify the functions and make the pixels symetrical two lines are used. This should equate to 192/2 or 96 Y pixels, but replicating combat required 104 pixels to fit the complete playfield. Some atari games use non symetical "pixels" and example is Space Invaders. The added complexity is that scan lines are interlaced so for now this is not supported.
+
+
 *sound(audv, audf, audc, length)*
 
 The atari had two channels of audio. This function just has one channel for now. I just barely have the audio working so I'm not sure if audv, audf, and audc map 1:1. Length is the number of samples. The sample rate is 31400Hz, so 1000 samples is 31.8 msec.
@@ -41,7 +44,7 @@ Sets up the repeat key function. ??? Questioning the logic of this even having a
 
 *update_switches()*
 
-This only returns one key. This should return multiple key presses espcially for two player games.
+This only returns one key. This should return multiple key presses espcially for two player games. This is the standard Stella keymap for two players, minus the right shift for player 0 fire. Player 0 is the arrow keys and space bar. Player 1 is y,g,jh and f for fire. 
 
 *reset_collision()*
 
@@ -58,6 +61,16 @@ This is an extra hook so that a program can test for a wall. This wasn't availab
 *get_collision(first_object, second_object)*
 
 This is equivalent to the atari collision registers. Allows collision test between two objects (P0, M0, P1, M0, ,PF, BL) 0 = no collision, 1 = collision.
+
+*game_title(name)*
+
+Non Atari function, just for naming the pygame window.
+
+*background(screen, y, height, color)*
+
+This is equivalent to setting the background color register at scan line "y" and for the next "height" scan lines (remember they are interlaced).
+
+
 
 =================
 
