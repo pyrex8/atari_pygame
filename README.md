@@ -131,10 +131,57 @@ Player data is expected to be 8 bits wide as a string of characters. 1 bits are 
 ``             ,'XXXXXX  ']``
 
 
+
+
+
+
 screenshot from combat.py 
 ------------
 
 ![alt text](https://github.com/pyrex8/atari/blob/master/combat_screen_shot.png "combat.py screen shot")
 
 
+
+
+
+
+example code drawing pacman 
+------------
+
+```
+from atari import *
+import math 
+
+pacman =    ['  XXX   '
+            ,' XX XX  '
+            ,'XXXXXXX '
+            ,'    XXX '
+            ,'XXXXXXX '
+            ,' XXXXX  '
+            ,'  XXX   ']
+
+# end data
+game_title('characters')
+move = ''
+
+while move != 'quit':
+    reset_collision()
+    background(screen, 0, WINDOWHEIGHT, black)
+
+    # Game code starts here
+    move = update_switches()
+
+    player0(screen, SCREEN_X/2 - 4 , SCREEN_Y/2 - 4, pacman, yellow)
+
+    # Game code ends here
+    pygame.display.flip()
+    clock.tick(FRAME_RATE)
+
+stream.close()
+p.terminate()    
+pygame.quit()
+```
+
+
+![alt text](https://github.com/pyrex8/atari/blob/master/pacman_screen_shot.png "combat.py screen shot")
 
