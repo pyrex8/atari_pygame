@@ -134,3 +134,12 @@ Player data is expected to be 8 bits wide as a string of characters. 1 bits are 
 ``             ,'  XXX   '`` 
 ``             ,'XXXXXX  '`` 
 ``             ,'XXXXXX  ']``
+
+
+Screen shot from combat.py 
+------------
+
+![alt text](https://github.com/pyrex8/atari/blob/master/combat_screen_shot.png "combat.py screen shot")
+
+
+
