@@ -87,7 +87,8 @@ Takes the place_digit() function one step further by printing a complete integer
 This is the playfield drawing function. To make life easier on the programmer the 20 bit data of a half playfield is not flipped like the atari 2600. The bits are WYSWYG. The playfield function can be used to draw a half playfield on either side, a mirrored or repeated graphic using the left and right values: 0 = off, 1 = on, non inverted, and 2 = inverted.
 Player data is expected to be 20 bits wide as a string of characters. 1 bits are are represented as upper case X. any other character can be a zero, a space or a "." are the most commonly used characters is disassembled ROMS. 
 
-            # 01234567890123456789
+
+```            # 01234567890123456789
 pfield =    ['XXXXXXXXXXXXXXXXXXXX'
             ,'X..................X'
             ,'X..................X'
@@ -100,7 +101,8 @@ pfield =    ['XXXXXXXXXXXXXXXXXXXX'
             ,'X.....X.............'
             ,'X.....X.............'
             ,'X.....X...XX........'
-            ]
+            ]```
+
 
 *ball(screen, x, y, width, height, color)*
 
@@ -118,6 +120,7 @@ Identical to ball function.
 
 Player data is expected to be 8 bits wide as a string of characters. 1 bits are are represented as upper case X. any other character can be a zero, a space or a "." are the most commonly used characters is disassembled ROMS.   
 
+```
 tank =      ['        '
             ,'XXXXXX  '
             ,'XXXXXX  '
@@ -126,7 +129,7 @@ tank =      ['        '
             ,'  XXX   '
             ,'XXXXXX  '
             ,'XXXXXX  ']
-
+```
 
 =================
 
