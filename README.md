@@ -7,6 +7,10 @@ This has been tested on windows and ubuntu using python 2.7
 
 atari.py is used in the example combat.py
 
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+
 dependencies
 ------------
 - python 2.7
