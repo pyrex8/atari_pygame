@@ -1,7 +1,5 @@
 # atari.py
-python pygame module for aiding the creation of atari 2600 VCS like games with graphics and sound routines.
-
-This is not an emulator. atari.py is the module. The example program is combat.py.
+The module atari.py was created as an aid for the creation of atari 2600 VCS like games with graphics and sound routines using python and pygame.
 
 This has been tested on windows and ubuntu using python 2.7
 
