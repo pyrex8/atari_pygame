@@ -20,9 +20,13 @@ installation
 
 basic structure in combat.py
 ----------------------------
-    from atari import *
-    initialization
-    pygame loop
+```
+
+from atari import *
+initialization
+pygame loop
+
+```
 
 command list
 ------------
