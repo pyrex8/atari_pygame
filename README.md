@@ -161,7 +161,7 @@ pacman =    ['  XXX   '
             ,'  XXX   ']
 
 # end data
-game_title('characters')
+game_title('pacman')
 move = ''
 
 while move != 'quit':
