@@ -121,18 +121,16 @@ Identical to ball function.
 
 Player data is expected to be 8 bits wide as a string of characters. 1 bits are are represented as upper case X. any other character can be a zero, a space or a "." are the most commonly used characters in disassembled ROMS.   
 
-``tank =       ['        '``
-``             ,'XXXXXX  '`` 
-``             ,'XXXXXX  '`` 
-``             ,'  XXX   '`` 
-``             ,'  XXXXXX'`` 
-``             ,'  XXX   '`` 
-``             ,'XXXXXX  '`` 
-``             ,'XXXXXX  ']``
-
-
-
-
+```
+tank =       ['        '
+             ,'XXXXXX  ' 
+             ,'XXXXXX  ' 
+             ,'  XXX   ' 
+             ,'  XXXXXX' 
+             ,'  XXX   ' 
+             ,'XXXXXX  ' 
+             ,'XXXXXX  ']
+```
 
 
 screenshot from combat.py 
